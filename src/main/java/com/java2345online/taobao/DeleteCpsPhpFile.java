@@ -1,4 +1,4 @@
-package com.java2345online.phpdeal;
+package com.java2345online.taobao;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <功能介绍> 对PHP文件夹下文件处理
+ * <功能介绍> 对本地PHP文件夹下文件处理
  *
  * @author LISIR
  * @date 2020/5/4

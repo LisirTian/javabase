@@ -1,10 +1,10 @@
 package com.java2345online.controller.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.java2345online.controller.App;
+import com.java2345online.controller.AppController;
 import com.java2345online.vo.Student;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * <功能介绍>
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @date 2020/5/4
  */
 @Controller
-//@ResponseBody
-public class AppImpl implements App {
+@Slf4j
+public class AppControllerImpl implements AppController {
     @Override
     public String getCallTest() {
-
+        log.debug("msg");
         return "test String";
     }
 
