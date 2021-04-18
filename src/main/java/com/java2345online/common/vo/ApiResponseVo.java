@@ -1,5 +1,8 @@
 package com.java2345online.common.vo;
 
+import com.alibaba.fastjson.annotation.JSONType;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -15,12 +18,18 @@ import java.util.List;
 @Getter
 @Setter
 @Accessors(chain = true)
+@JsonPropertyOrder({"orderID", "result", "data", "errors", "pageVo"})
+@JSONType(orders= "orderID, result, data, errors, pageVo")
 public class ApiResponseVo<T> {
-    private String result; // 返回结果 SUCCESS ERROR
-
     private String orderID;
+
+    private String result = "SUCCESS"; // 返回结果 SUCCESS ERROR
 
     private T data;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private List<ApiResponseErrorVo> errors;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private ApiResponsePageVo pageInfo;
 }

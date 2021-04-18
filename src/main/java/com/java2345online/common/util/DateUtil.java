@@ -1,6 +1,6 @@
-package com.java2345online.common.utils;
+package com.java2345online.common.util;
 
-import com.java2345online.common.constant.CommonConst;
+import com.java2345online.common.constant.Const;
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.ParseException;
@@ -24,7 +24,7 @@ public class DateUtil {
         if (StringUtils.isEmpty(date)) {
             return true;
         }
-        SimpleDateFormat dateFormat = new SimpleDateFormat(CommonConst.DATE_FORMAT_DEFAULT);
+        SimpleDateFormat dateFormat = new SimpleDateFormat(Const.DATE_FORMAT_DEFAULT);
         try {
             dateFormat.parse(date);
         } catch (ParseException e) {
@@ -64,7 +64,7 @@ public class DateUtil {
         if (StringUtils.isEmpty(date)) {
             return new Date();
         }
-        SimpleDateFormat dateFormat = new SimpleDateFormat(CommonConst.DATE_FORMAT_DEFAULT);
+        SimpleDateFormat dateFormat = new SimpleDateFormat(Const.DATE_FORMAT_DEFAULT);
 
         return dateFormat.parse(date);
     }
@@ -93,7 +93,7 @@ public class DateUtil {
      * @return "yyyy-MM-dd HH:mm:ss"类型时间
      */
     public static String formatDate(Date date) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat(CommonConst.DATE_FORMAT_DEFAULT);
+        SimpleDateFormat dateFormat = new SimpleDateFormat(Const.DATE_FORMAT_DEFAULT);
         return dateFormat.format(date);
     }
 
